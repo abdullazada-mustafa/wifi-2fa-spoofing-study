@@ -5,8 +5,7 @@ Radio Wave Transmission and Machine Learning" (extended in the IEEE Access
 2024 paper "Leveraging Machine Learning for Wi-Fi-based Environmental
 Continuous Two-Factor Authentication").
 
-Dataset: "RSSI Measurements of Beacon Frames from Wi-Fi Radio Waves"
-IEEE DataPort, DOI 10.21227/2bk3-dw90  (login required to download)
+Data: self-collected Wi-Fi scans, in the same column format as the authors' dataset.
 Columns: RPi, SSID, Frequency (Hz), RSSI (dBm), Location, Label
          Label: 1 = authentic (devices co-located), 0 = unauthorized
 
@@ -20,11 +19,10 @@ What this does:
      nearby attacker broadcasting look-alike beacons could do. Then
      measures how many of these forged samples each model wrongly ACCEPTS.
 
-The acceptance rate it prints is the number for your email.
 
 Usage:
   1. pip install pandas scikit-learn numpy
-  2. Put Dataset.csv next to this file (download it from IEEE DataPort).
+  2. Put wifi_dataset.csv next to this file.
   3. python wifi_2fa_spoof_attack.py
 """
 
@@ -162,8 +160,6 @@ def main():
               f"({int((preds==1).sum())}/{len(preds)} forged samples let in)  "
               f"| baseline: {base*100:5.1f}% of real far samples let in")
 
-    print("\nUse the highest acceptance rate (or the Decision Tree's) in your email,")
-    print("e.g. 'the decision tree accepted XX% of the forged samples'.")
 
 
 if __name__ == "__main__":
