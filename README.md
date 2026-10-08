@@ -62,7 +62,7 @@ This is a small first test, not a replication of the paper:
 
 ## Next steps
 
-- Repeat with more access points, locations and the authors' public dataset.
+- Repeat with more access points, locations and the authors' dataset.
 - Run the attack live with a low-cost board broadcasting look-alike beacons in a
   controlled lab setting.
 - Make the models harder to fool, for example by adding features that are
