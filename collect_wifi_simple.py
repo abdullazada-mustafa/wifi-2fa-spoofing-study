@@ -6,10 +6,8 @@ on its own after the set number of scans). It writes wifi_dataset.csv in the
 same columns as the original dataset:
     RPi, SSID, Frequency (Hz), RSSI (dBm), Location, Label
 
-Everything is collected as Label 1 (one session). Tomorrow you can run it
-again from a different spot and we will relabel part of it as 0, or we will
-adjust the attack script to work from a single session. Either way, getting
-these scans saved today is the important part.
+Set LABEL to "1" for scans at the user's position and "0" for scans from a
+far-away position, and set LOCATION, before each run.
 
 No admin rights needed. You are only listening to Wi-Fi beacons.
 """
